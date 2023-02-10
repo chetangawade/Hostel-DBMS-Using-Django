@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}
+    {% endblock head %}
+    <style>
+        .icon-style {
+            margin: 0% 2%;
+        }
+        .costom-margin {
+        margin: 2%;
+        font-weight: 500;
+    }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg costom-margin">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2" href="#">Hostel Data Base</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mt-1" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="/hostel">Hostel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="/mess">Mess</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="/admi_form">Admission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="/admin">Admin</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success fs-5" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock body %}
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <i class="fa fa-facebook-f contact-st icon-style" style="font-size:24px"></i>
+                <i class="fa fa-twitter contact-st  icon-style" style="font-size:24px"></i>
+                <i class="fa fa-instagram contact-st icon-style" style="font-size:24px"></i>
+                <i class="fa fa-linkedin contact-st icon-style" style="font-size:24px"></i>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+    .set-text {
+        text-decoration: none;
+        color: rgb(252, 247, 247);
+    }
+</style>
+{% endblock head %}
+{% block body %}
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark"
+        style="background: url(https://source.unsplash.com/1400x400/?hostel);">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic fw-bolder">Title of a longer featured blog post</h1>
+            <p class="lead my-3 fw-semibold">Multiple lines of text that form the lede, informing new readers quickly and
+                efficiently about what’s most interesting in this post’s contents.</p>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-3">Boy's Hostel</h3>
+                    <strong class="d-inline-block mb-2 text-primary">Total No of seats :
+                        {{total_no_of_boys_seats}}</strong>
+                    <strong class="d-inline-block mb-2 text-success">Total No of Boys : {{no_of_boys}}</strong>
+                    <strong class="d-inline-block mb-2 text-danger">Total No of seats Available :
+                        {{total_no_of_boys_seats_available}}</strong>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary col-md-4 ms-2 "><a href="/admin/"
+                                class="set-text">View Students</a></button>
+                        <button type="button" class="btn btn-primary col-md-4 ms-3"><a href="/admi_form"
+                                class="set-text">Admission Form</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-3">Girls's Hostel</h3>
+                    <strong class="d-inline-block mb-2 text-primary">Total No of seats :
+                        {{total_no_of_girls_seats}}</strong>
+                    <strong class="d-inline-block mb-2 text-success">Total No of Girls : {{no_of_girls}}</strong>
+                    <strong class="d-inline-block mb-2 text-danger">Total No of seats Available :
+                        {{total_no_of_girls_seats_available}}</strong>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary col-md-4 ms-2 "><a href="/admin/"
+                                class="set-text">View Students</a></button>
+                        <button type="button" class="btn btn-primary col-md-4 ms-3"><a href="/admi_form"
+                                class="set-text">Admission Form</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock body %}
